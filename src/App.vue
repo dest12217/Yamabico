@@ -1,32 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <component-header />
+    <component-main><router-view /></component-main>
+    <component-footer />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { VueInitialize } from '@/types/'
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default VueInitialize.extend({
+  name: 'App',
+  components: {
+    componentHeader: () => import('@/components/Header.vue'),
+    componentMain: () => import('@/components/Main.vue'),
+    componentFooter: () => import('@/components/Footer.vue')
   }
-}
+})
+</script>
+
+<style lang="scss">
+@use '@/assets/scss/reset.scss';
 </style>
