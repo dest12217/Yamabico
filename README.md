@@ -1,24 +1,10 @@
 # yamabico
 
-## Project setup
-```
-npm install
-```
+## これはなに？
+ランダムなテキストを生成するツールです。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## どこに公開されているの？
 
-### Compiles and minifies for production
-```
-npm run build
-```
+https://www.desto.me/yamabico/#/
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+※ 要basic認証
